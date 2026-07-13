@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login • Benny's System</title>
+
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <img src="assets/img/bennys.png" class="logo">
+
+            <h1>Benny's System</h1>
+
+            <p>Faça login para continuar</p>
+
+            <form id="loginForm">
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="E-mail"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="Senha"
+                    required
+                >
+
+                <button type="submit">
+                    Entrar
+                </button>
+
+            </form>
+
+            <p id="mensagem"></p>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="assets/js/auth.js"></script>
+
+</body>
+
+</html>
