@@ -1,7 +1,8 @@
 import {
-    auth,
-    db
-} from "./firebase.js";
+    iniciarSistema,
+    configurarMenu,
+    configurarLogout
+} from "./app.js";
 
 import {
     onAuthStateChanged,
