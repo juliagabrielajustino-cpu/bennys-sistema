@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Histórico | Benny's System</title>
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/historico.css"
+    >
+</head>
+
+<body>
+
+    <header class="topo">
+
+        <button
+            type="button"
+            id="abrirMenu"
+            class="botao-menu"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
+
+        <div class="marca">
+
+            <img
+                src="../assets/img/bennys.png"
+                alt="Logo Benny's"
+                class="logo"
+            >
+
+            <div>
+                <h1>Benny's System</h1>
+                <p>Motor Works</p>
+            </div>
+
+        </div>
+
+        <button
+            type="button"
+            id="sair"
+            class="botao-sair"
+        >
+            Sair
+        </button>
+
+    </header>
+
+
+    <aside
+        id="menuLateral"
+        class="menu-lateral"
+    >
+
+        <div class="perfil-menu">
+
+            <div class="avatar">
+                👤
+            </div>
+
+            <div>
+                <strong id="nomeMenu">
+                    Funcionário
+                </strong>
+
+                <span id="emailMenu">
+                    Carregando...
+                </span>
+            </div>
+
+        </div>
+
+        <nav class="navegacao">
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="ponto.html">
+                🕒 Controle de ponto
+            </a>
+
+            <a href="calculadora.html">
+                🧮 Calculadora
+            </a>
+
+            <a
+                href="historico.html"
+                class="ativo"
+            >
+                📅 Histórico
+            </a>
+
+            <a
+                href="funcionarios.html"
+                class="somente-admin"
+            >
+                👥 Funcionários
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <div
+        id="fundoMenu"
+        class="fundo-menu"
+    ></div>
+
+
+    <main class="conteudo">
+
+        <section class="cabecalho-pagina">
+
+            <div>
+                <p class="texto-menor">
+                    Registros de jornada
+                </p>
+
+                <h2>Histórico de Ponto</h2>
+
+                <p>
+                    Consulte suas entradas, saídas e horas trabalhadas.
+                </p>
+            </div>
+
+            <div class="resumo-total">
+
+                <span>Total exibido</span>
+
+                <strong id="totalPeriodo">
+                    00h00min
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <section class="painel-filtros">
+
+            <div class="campo-filtro">
+
+                <label for="filtroPeriodo">
+                    Período
+                </label>
+
+                <select id="filtroPeriodo">
+
+                    <option value="todos">
+                        Todos os registros
+                    </option>
+
+                    <option value="hoje">
+                        Hoje
+                    </option>
+
+                    <option value="semana">
+                        Últimos 7 dias
+                    </option>
+
+                    <option value="mes">
+                        Este mês
+                    </option>
+
+                </select>
+
+            </div>
+
+            <button
+                type="button"
+                id="atualizar"
+                class="botao-atualizar"
+            >
+                Atualizar
+            </button>
+
+        </section>
+
+
+        <section class="resumo-historico">
+
+            <article class="cartao-resumo">
+
+                <span>Registros encontrados</span>
+
+                <strong id="quantidadeRegistros">
+                    0
+                </strong>
+
+            </article>
+
+            <article class="cartao-resumo">
+
+                <span>Registros finalizados</span>
+
+                <strong id="quantidadeFinalizados">
+                    0
+                </strong>
+
+            </article>
+
+            <article class="cartao-resumo">
+
+                <span>Em andamento</span>
+
+                <strong id="quantidadeAbertos">
+                    0
+                </strong>
+
+            </article>
+
+        </section>
+
+
+        <section class="painel-historico">
+
+            <div class="titulo-historico">
+
+                <div>
+                    <h2>Registros</h2>
+
+                    <p id="descricaoPeriodo">
+                        Exibindo todos os seus registros.
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="listaHistorico">
+
+                <p class="carregando">
+                    Carregando histórico...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="../assets/js/historico.js"
+    ></script>
+
+</body>
+</html>
