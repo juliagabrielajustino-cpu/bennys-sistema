@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Controle de Ponto | Benny's System</title>
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/ponto.css"
+    >
+</head>
+
+<body>
+
+    <header class="topo">
+
+        <button
+            type="button"
+            id="abrirMenu"
+            class="botao-menu"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
+
+        <div class="marca">
+
+            <img
+                src="../assets/img/bennys.png"
+                alt="Logo Benny's"
+                class="logo"
+            >
+
+            <div>
+                <h1>Benny's System</h1>
+                <p>Motor Works</p>
+            </div>
+
+        </div>
+
+        <button
+            type="button"
+            id="sair"
+            class="botao-sair"
+        >
+            Sair
+        </button>
+
+    </header>
+
+
+    <aside
+        id="menuLateral"
+        class="menu-lateral"
+    >
+
+        <div class="perfil-menu">
+
+            <div class="avatar">
+                👤
+            </div>
+
+            <div>
+                <strong id="nomeMenu">
+                    Funcionário
+                </strong>
+
+                <span id="emailMenu">
+                    Carregando...
+                </span>
+            </div>
+
+        </div>
+
+        <nav class="navegacao">
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a
+                href="ponto.html"
+                class="ativo"
+            >
+                🕒 Controle de ponto
+            </a>
+
+            <a href="calculadora.html">
+                🧮 Calculadora
+            </a>
+
+            <a href="historico.html">
+                📅 Histórico
+            </a>
+
+            <a
+                href="funcionarios.html"
+                class="somente-admin"
+            >
+                👥 Funcionários
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <div
+        id="fundoMenu"
+        class="fundo-menu"
+    ></div>
+
+
+    <main class="conteudo">
+
+        <section class="cabecalho-pagina">
+
+            <div>
+                <p class="texto-menor">
+                    Registro de jornada
+                </p>
+
+                <h2>Controle de Ponto</h2>
+
+                <p id="dataAtual">
+                    —
+                </p>
+            </div>
+
+            <div class="relogio-atual">
+
+                <span>Horário atual</span>
+
+                <strong id="relogio">
+                    --:--:--
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <section class="grade-ponto">
+
+            <article class="cartao-ponto status-card">
+
+                <span>Status atual</span>
+
+                <strong
+                    id="statusPonto"
+                    class="status fora"
+                >
+                    Fora de serviço
+                </strong>
+
+            </article>
+
+
+            <article class="cartao-ponto">
+
+                <span>Entrada atual</span>
+
+                <strong id="horarioEntrada">
+                    —
+                </strong>
+
+            </article>
+
+
+            <article class="cartao-ponto">
+
+                <span>Tempo trabalhado</span>
+
+                <strong id="tempoTrabalhado">
+                    00h00min
+                </strong>
+
+            </article>
+
+        </section>
+
+
+        <section class="area-registro">
+
+            <div class="titulo-area">
+
+                <div>
+                    <h2>Registrar ponto</h2>
+
+                    <p>
+                        Use os botões abaixo para iniciar ou encerrar sua jornada.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="botoes-registro">
+
+                <button
+                    type="button"
+                    id="baterEntrada"
+                    class="botao-ponto entrada"
+                >
+                    <span>▶</span>
+                    Bater entrada
+                </button>
+
+                <button
+                    type="button"
+                    id="baterSaida"
+                    class="botao-ponto saida"
+                    disabled
+                >
+                    <span>■</span>
+                    Bater saída
+                </button>
+
+            </div>
+
+            <p
+                id="mensagemPonto"
+                class="mensagem"
+                aria-live="polite"
+            ></p>
+
+        </section>
+
+
+        <section class="historico-recente">
+
+            <div class="titulo-area">
+
+                <div>
+                    <h2>Registros recentes</h2>
+
+                    <p>
+                        Seus últimos registros de entrada e saída.
+                    </p>
+                </div>
+
+                <a
+                    href="historico.html"
+                    class="link-historico"
+                >
+                    Ver histórico completo
+                </a>
+
+            </div>
+
+            <div id="listaRegistros">
+
+                <p class="carregando">
+                    Carregando registros...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="../assets/js/ponto.js"
+    ></script>
+
+</body>
+</html>
