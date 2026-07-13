@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Calculadora | Benny's System</title>
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/calculadora.css"
+    >
+</head>
+
+<body>
+
+    <header class="topo">
+
+        <button
+            type="button"
+            id="abrirMenu"
+            class="botao-menu"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
+
+        <div class="marca">
+
+            <img
+                src="../assets/img/bennys.png"
+                alt="Logo Benny's"
+                class="logo"
+            >
+
+            <div>
+                <h1>Benny's System</h1>
+                <p>Motor Works</p>
+            </div>
+
+        </div>
+
+        <button
+            type="button"
+            id="sair"
+            class="botao-sair"
+        >
+            Sair
+        </button>
+
+    </header>
+
+
+    <aside
+        id="menuLateral"
+        class="menu-lateral"
+    >
+
+        <div class="perfil-menu">
+
+            <div class="avatar">
+                👤
+            </div>
+
+            <div>
+                <strong id="nomeMenu">
+                    Funcionário
+                </strong>
+
+                <span id="emailMenu">
+                    Carregando...
+                </span>
+            </div>
+
+        </div>
+
+        <nav class="navegacao">
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="ponto.html">
+                🕒 Controle de ponto
+            </a>
+
+            <a
+                href="calculadora.html"
+                class="ativo"
+            >
+                🧮 Calculadora
+            </a>
+
+            <a href="historico.html">
+                📅 Histórico
+            </a>
+
+            <a
+                href="funcionarios.html"
+                class="somente-admin"
+            >
+                👥 Funcionários
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <div
+        id="fundoMenu"
+        class="fundo-menu"
+    ></div>
+
+
+    <main class="conteudo">
+
+        <section class="cabecalho-pagina">
+
+            <div>
+                <p class="texto-menor">
+                    Orçamento de serviços
+                </p>
+
+                <h2>Calculadora Benny's</h2>
+
+                <p>
+                    Escolha os serviços, a parceria e o deslocamento.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="painel-calculadora">
+
+            <div class="bloco-calculadora">
+
+                <h2>Serviços</h2>
+
+                <div class="lista-servicos">
+
+                    <div class="servico">
+
+                        <div>
+                            <strong>Pneu</strong>
+                            <span>R$ 500</span>
+                        </div>
+
+                        <input
+                            type="number"
+                            id="pneu"
+                            min="0"
+                            value="0"
+                            inputmode="numeric"
+                        >
+
+                    </div>
+
+                    <div class="servico">
+
+                        <div>
+                            <strong>Chave Inglesa</strong>
+                            <span>R$ 1.000</span>
+                        </div>
+
+                        <input
+                            type="number"
+                            id="chave"
+                            min="0"
+                            value="0"
+                            inputmode="numeric"
+                        >
+
+                    </div>
+
+                    <div class="servico">
+
+                        <div>
+                            <strong>Kit Básico</strong>
+                            <span>R$ 1.000</span>
+                        </div>
+
+                        <input
+                            type="number"
+                            id="kitBasico"
+                            min="0"
+                            value="0"
+                            inputmode="numeric"
+                        >
+
+                    </div>
+
+                    <div class="servico">
+
+                        <div>
+                            <strong>Kit Avançado</strong>
+                            <span>R$ 3.000</span>
+                        </div>
+
+                        <input
+                            type="number"
+                            id="kitAvancado"
+                            min="0"
+                            value="0"
+                            inputmode="numeric"
+                        >
+
+                    </div>
+
+                    <div class="servico">
+
+                        <div>
+                            <strong>Reparinho</strong>
+                            <span>R$ 1.000</span>
+                        </div>
+
+                        <input
+                            type="number"
+                            id="reparinho"
+                            min="0"
+                            value="0"
+                            inputmode="numeric"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="bloco-calculadora">
+
+                <label class="opcao-checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="usarTuning"
+                    >
+
+                    <span>Adicionar tuning</span>
+
+                </label>
+
+                <div
+                    id="campoTuning"
+                    class="campo-escondido"
+                >
+
+                    <label for="tuning">
+                        Valor original do tuning
+                    </label>
+
+                    <input
+                        type="number"
+                        id="tuning"
+                        min="0"
+                        value="0"
+                        inputmode="decimal"
+                    >
+
+                    <div class="linha-calculo">
+
+                        <span>Valor final com +30%</span>
+
+                        <strong id="valorTuningFinal">
+                            R$ 0,00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="bloco-calculadora">
+
+                <h2>Parceria</h2>
+
+                <div class="parcerias">
+
+                    <label class="opcao-parceria">
+
+                        <input
+                            type="radio"
+                            name="parceria"
+                            value="0"
+                            checked
+                        >
+
+                        <span>
+                            <strong>Sem parceria</strong>
+                            <small>Sem desconto nos serviços</small>
+                        </span>
+
+                    </label>
+
+                    <label class="opcao-parceria">
+
+                        <input
+                            type="radio"
+                            name="parceria"
+                            value="10"
+                        >
+
+                        <span>
+                            <strong>Parceria 1</strong>
+                            <small>10% de desconto nos serviços</small>
+                        </span>
+
+                    </label>
+
+                    <label class="opcao-parceria">
+
+                        <input
+                            type="radio"
+                            name="parceria"
+                            value="20"
+                        >
+
+                        <span>
+                            <strong>Parceria 2</strong>
+                            <small>20% de desconto nos serviços</small>
+                        </span>
+
+                    </label>
+
+                    <label class="opcao-parceria">
+
+                        <input
+                            type="radio"
+                            name="parceria"
+                            value="15"
+                        >
+
+                        <span>
+                            <strong>Polícia</strong>
+                            <small>15% de desconto nos serviços</small>
+                        </span>
+
+                    </label>
+
+                    <label class="opcao-parceria">
+
+                        <input
+                            type="radio"
+                            name="parceria"
+                            value="15"
+                        >
+
+                        <span>
+                            <strong>HP</strong>
+                            <small>15% de desconto nos serviços</small>
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="bloco-calculadora">
+
+                <label class="opcao-checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="atendimentoExterno"
+                    >
+
+                    <span>Atendimento externo</span>
+
+                </label>
+
+                <div
+                    id="campoLocal"
+                    class="campo-escondido"
+                >
+
+                    <label for="local">
+                        Local do atendimento
+                    </label>
+
+                    <select id="local">
+
+                        <option value="0">
+                            Sul — sem custo
+                        </option>
+
+                        <option value="500">
+                            Sand (+R$ 500)
+                        </option>
+
+                        <option value="500">
+                            Paleto Bay (+R$ 500)
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="botoes-calculadora">
+
+                <button
+                    type="button"
+                    id="calcular"
+                    class="botao-calcular"
+                >
+                    Gerar orçamento
+                </button>
+
+                <button
+                    type="button"
+                    id="limpar"
+                    class="botao-limpar"
+                >
+                    Limpar
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="orcamento">
+
+            <h2>Resumo do orçamento</h2>
+
+            <div id="resumoServicos">
+
+                <p class="vazio">
+                    Nenhum serviço selecionado.
+                </p>
+
+            </div>
+
+            <div class="linha-resumo">
+
+                <span>Subtotal dos serviços</span>
+
+                <strong id="subtotalServicos">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+            <div class="linha-resumo">
+
+                <span>Desconto nos serviços</span>
+
+                <strong id="valorDesconto">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+            <div class="linha-resumo">
+
+                <span>Serviços com desconto</span>
+
+                <strong id="servicosComDesconto">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+            <div class="linha-resumo">
+
+                <span>Tuning</span>
+
+                <strong id="valorTuningResumo">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+            <div class="linha-resumo">
+
+                <span>Deslocamento</span>
+
+                <strong id="valorDeslocamento">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+            <div class="linha-resumo total">
+
+                <span>Total</span>
+
+                <strong id="resultado">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="../assets/js/calculadora.js"
+    ></script>
+
+</body>
+</html>
