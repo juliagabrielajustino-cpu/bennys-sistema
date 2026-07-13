@@ -550,17 +550,15 @@ botaoSair.addEventListener(
 );
 
 
-/* PROTEGER A PÁGINA */
+/* INICIAR DASHBOARD */
 
-onAuthStateChanged(auth, async (usuario) => {
-    if (!usuario) {
-        window.location.href = "../index.html";
-        return;
-    }
+const usuario = await iniciarSistema();
 
-    usuarioAtual = usuario;
+configurarMenu();
+configurarLogout();
 
-    formatarDataAtual();
-    await carregarPerfil(usuario);
-    observarPontoAtual(usuario);
-});
+usuarioAtual = usuario;
+
+formatarDataAtual();
+await carregarPerfil(usuario);
+observarPontoAtual(usuario);
