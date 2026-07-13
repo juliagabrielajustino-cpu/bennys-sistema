@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Funcionários | Benny's System</title>
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/funcionarios.css"
+    >
+</head>
+
+<body>
+
+    <header class="topo">
+
+        <button
+            type="button"
+            id="abrirMenu"
+            class="botao-menu"
+        >
+            ☰
+        </button>
+
+        <div class="marca">
+
+            <img
+                src="../assets/img/bennys.png"
+                alt="Logo Benny's"
+                class="logo"
+            >
+
+            <div>
+                <h1>Benny's System</h1>
+                <p>Motor Works</p>
+            </div>
+
+        </div>
+
+        <button
+            type="button"
+            id="sair"
+            class="botao-sair"
+        >
+            Sair
+        </button>
+
+    </header>
+
+
+    <aside
+        id="menuLateral"
+        class="menu-lateral"
+    >
+
+        <div class="perfil-menu">
+
+            <div class="avatar">
+                👤
+            </div>
+
+            <div>
+                <strong id="nomeMenu">
+                    Funcionário
+                </strong>
+
+                <span id="emailMenu">
+                    Carregando...
+                </span>
+            </div>
+
+        </div>
+
+        <nav class="navegacao">
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="ponto.html">
+                🕒 Controle de ponto
+            </a>
+
+            <a href="calculadora.html">
+                🧮 Calculadora
+            </a>
+
+            <a href="historico.html">
+                📅 Histórico
+            </a>
+
+            <a
+                href="funcionarios.html"
+                class="ativo somente-admin"
+            >
+                👥 Funcionários
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <div
+        id="fundoMenu"
+        class="fundo-menu"
+    ></div>
+
+
+    <main class="conteudo">
+
+        <section class="cabecalho-pagina">
+
+            <div>
+                <p class="texto-menor">
+                    Administração
+                </p>
+
+                <h2>Funcionários</h2>
+
+                <p>
+                    Consulte e altere os perfis cadastrados.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="painel-funcionarios">
+
+            <div class="titulo-secao">
+
+                <div>
+                    <h2>Funcionários cadastrados</h2>
+
+                    <p>
+                        As contas são criadas pelo Firebase Authentication.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    id="atualizar"
+                >
+                    Atualizar
+                </button>
+
+            </div>
+
+            <div id="listaFuncionarios">
+
+                <p class="carregando">
+                    Carregando funcionários...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="../assets/js/funcionarios.js"
+    ></script>
+
+</body>
+</html>
