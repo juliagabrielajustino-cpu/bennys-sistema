@@ -2,19 +2,380 @@
 <html lang="pt-BR">
 
 <head>
+    <meta charset="UTF-8">
 
-<meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<title>Dashboard</title>
+    <title>Dashboard | Benny's System</title>
 
+    <link
+        rel="stylesheet"
+        href="../assets/css/dashboard.css"
+    >
 </head>
 
-<body style="background:#111;color:white;font-family:Arial;text-align:center;padding-top:120px;">
+<body>
 
-<h1>✅ Login realizado com sucesso!</h1>
+    <header class="topo">
 
-<h2>Bem-vindo ao Benny's System</h2>
+        <button
+            type="button"
+            id="abrirMenu"
+            class="botao-menu"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
+
+        <div class="marca">
+
+            <img
+                src="../assets/img/bennys.png"
+                alt="Logo Benny's"
+                class="logo"
+            >
+
+            <div>
+                <h1>Benny's System</h1>
+                <p>Motor Works</p>
+            </div>
+
+        </div>
+
+        <button
+            type="button"
+            id="sair"
+            class="botao-sair"
+        >
+            Sair
+        </button>
+
+    </header>
+
+
+    <aside
+        id="menuLateral"
+        class="menu-lateral"
+    >
+
+        <div class="perfil-menu">
+
+            <div class="avatar">
+                👤
+            </div>
+
+            <div>
+                <strong id="nomeMenu">
+                    Funcionário
+                </strong>
+
+                <span id="emailMenu">
+                    Carregando...
+                </span>
+            </div>
+
+        </div>
+
+        <nav class="navegacao">
+
+            <a
+                href="dashboard.html"
+                class="ativo"
+            >
+                🏠 Dashboard
+            </a>
+
+            <a href="ponto.html">
+                🕒 Controle de ponto
+            </a>
+
+            <a href="calculadora.html">
+                🧮 Calculadora
+            </a>
+
+            <a href="historico.html">
+                📅 Histórico
+            </a>
+
+            <a
+                href="funcionarios.html"
+                id="linkFuncionarios"
+                class="somente-admin"
+            >
+                👥 Funcionários
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <div
+        id="fundoMenu"
+        class="fundo-menu"
+    ></div>
+
+
+    <main class="conteudo">
+
+        <section class="boas-vindas">
+
+            <div>
+                <p class="texto-menor">
+                    Bem-vindo ao sistema
+                </p>
+
+                <h2 id="nomeUsuario">
+                    Carregando...
+                </h2>
+
+                <p id="dataAtual">
+                    —
+                </p>
+            </div>
+
+            <div class="cargo">
+
+                <span>Cargo</span>
+
+                <strong id="cargoUsuario">
+                    Funcionário
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <section class="grade-status">
+
+            <article class="cartao">
+
+                <div class="icone-cartao">
+                    👤
+                </div>
+
+                <div>
+                    <span>Funcionário</span>
+
+                    <strong id="emailUsuario">
+                        Carregando...
+                    </strong>
+                </div>
+
+            </article>
+
+
+            <article class="cartao">
+
+                <div class="icone-cartao">
+                    🕒
+                </div>
+
+                <div>
+                    <span>Status do ponto</span>
+
+                    <strong
+                        id="statusPonto"
+                        class="status fora"
+                    >
+                        Fora de serviço
+                    </strong>
+                </div>
+
+            </article>
+
+
+            <article class="cartao">
+
+                <div class="icone-cartao">
+                    ⏱️
+                </div>
+
+                <div>
+                    <span>Entrada atual</span>
+
+                    <strong id="horarioEntrada">
+                        —
+                    </strong>
+                </div>
+
+            </article>
+
+
+            <article class="cartao">
+
+                <div class="icone-cartao">
+                    📆
+                </div>
+
+                <div>
+                    <span>Tempo trabalhado</span>
+
+                    <strong id="tempoTrabalhado">
+                        00h00min
+                    </strong>
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <section class="painel-ponto">
+
+            <div class="cabecalho-secao">
+
+                <div>
+                    <h2>Controle de ponto</h2>
+
+                    <p>
+                        Registre sua entrada e saída.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="botoes-ponto">
+
+                <button
+                    type="button"
+                    id="baterEntrada"
+                    class="botao entrada"
+                >
+                    Bater entrada
+                </button>
+
+                <button
+                    type="button"
+                    id="baterSaida"
+                    class="botao saida"
+                    disabled
+                >
+                    Bater saída
+                </button>
+
+            </div>
+
+            <p
+                id="mensagemPonto"
+                class="mensagem"
+                aria-live="polite"
+            ></p>
+
+        </section>
+
+
+        <section class="atalhos">
+
+            <div class="cabecalho-secao">
+
+                <div>
+                    <h2>Acessos rápidos</h2>
+
+                    <p>
+                        Escolha uma área do sistema.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="grade-atalhos">
+
+                <a
+                    href="calculadora.html"
+                    class="atalho"
+                >
+
+                    <span class="icone-atalho">
+                        🧮
+                    </span>
+
+                    <div>
+                        <strong>Calculadora</strong>
+
+                        <small>
+                            Gerar orçamento de serviços
+                        </small>
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="ponto.html"
+                    class="atalho"
+                >
+
+                    <span class="icone-atalho">
+                        🕒
+                    </span>
+
+                    <div>
+                        <strong>Controle de ponto</strong>
+
+                        <small>
+                            Entrada e saída de serviço
+                        </small>
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="historico.html"
+                    class="atalho"
+                >
+
+                    <span class="icone-atalho">
+                        📅
+                    </span>
+
+                    <div>
+                        <strong>Histórico</strong>
+
+                        <small>
+                            Consultar registros anteriores
+                        </small>
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="funcionarios.html"
+                    id="atalhoFuncionarios"
+                    class="atalho somente-admin"
+                >
+
+                    <span class="icone-atalho">
+                        👥
+                    </span>
+
+                    <div>
+                        <strong>Funcionários</strong>
+
+                        <small>
+                            Gerenciar contas e cargos
+                        </small>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="../assets/js/dashboard.js"
+    ></script>
 
 </body>
-
 </html>
