@@ -3,10 +3,14 @@ import {
     configurarMenu,
     configurarLogout
 } from "./app.js";
-
 import {
-    onAuthStateChanged,
-    signOut
+    collection,
+    deleteDoc,
+    doc,
+    getDoc,
+    onSnapshot,
+    serverTimestamp,
+    writeBatch
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
 
 import {
