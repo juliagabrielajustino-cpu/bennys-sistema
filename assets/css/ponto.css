@@ -1,0 +1,272 @@
+.cabecalho-pagina {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(213, 0, 0, 0.14),
+            rgba(20, 20, 20, 0.95)
+        );
+
+    border: 1px solid #3a2222;
+    border-radius: 16px;
+}
+
+.cabecalho-pagina h2 {
+    margin-top: 5px;
+    font-size: 28px;
+}
+
+.relogio-atual {
+    min-width: 170px;
+    padding: 14px 18px;
+
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid #4a3030;
+    border-radius: 11px;
+
+    text-align: right;
+}
+
+.relogio-atual span,
+.relogio-atual strong {
+    display: block;
+}
+
+.relogio-atual span {
+    color: #b7b7b7;
+    font-size: 12px;
+}
+
+.relogio-atual strong {
+    margin-top: 5px;
+    color: #ff3030;
+    font-size: 25px;
+}
+
+.grade-ponto {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+
+    margin-top: 20px;
+}
+
+.cartao-ponto {
+    padding: 20px;
+
+    background: #151515;
+    border: 1px solid #303030;
+    border-radius: 13px;
+}
+
+.cartao-ponto span,
+.cartao-ponto strong {
+    display: block;
+}
+
+.cartao-ponto span {
+    color: #b7b7b7;
+    font-size: 12px;
+}
+
+.cartao-ponto strong {
+    margin-top: 8px;
+    color: #ffffff;
+    font-size: 21px;
+}
+
+.status-card .status.em {
+    color: #39e58c;
+}
+
+.status-card .status.fora {
+    color: #ff7373;
+}
+
+.area-registro,
+.historico-recente {
+    margin-top: 20px;
+    padding: 22px;
+
+    background: #151515;
+    border: 1px solid #303030;
+    border-radius: 14px;
+}
+
+.titulo-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.titulo-area h2 {
+    font-size: 20px;
+}
+
+.titulo-area p {
+    margin-top: 5px;
+    color: #b7b7b7;
+    font-size: 13px;
+}
+
+.botoes-registro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.botao-ponto {
+    min-height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    border: none;
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.botao-ponto.entrada {
+    background: #087f46;
+}
+
+.botao-ponto.entrada:hover {
+    background: #0a9b56;
+}
+
+.botao-ponto.saida {
+    background: #d50000;
+}
+
+.botao-ponto.saida:hover {
+    background: #ff3030;
+}
+
+.botao-ponto:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.link-historico {
+    padding: 10px 13px;
+
+    background: #2a1010;
+    border: 1px solid #5b2020;
+    border-radius: 9px;
+
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.link-historico:hover {
+    background: #351313;
+}
+
+#listaRegistros {
+    display: grid;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.registro {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 12px;
+
+    padding: 14px;
+
+    background: #1d1d1d;
+    border: 1px solid #343434;
+    border-radius: 10px;
+}
+
+.registro div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.registro span {
+    color: #9f9f9f;
+    font-size: 11px;
+}
+
+.registro strong {
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.carregando,
+.sem-registros {
+    color: #9b9b9b;
+    text-align: center;
+    padding: 18px;
+}
+
+@media (max-width: 900px) {
+    .grade-ponto {
+        grid-template-columns: 1fr;
+    }
+
+    .registro {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .cabecalho-pagina {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 19px;
+    }
+
+    .cabecalho-pagina h2 {
+        font-size: 24px;
+    }
+
+    .relogio-atual {
+        width: 100%;
+        text-align: left;
+    }
+
+    .botoes-registro {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-area {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .link-historico {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .area-registro,
+    .historico-recente {
+        padding: 17px 14px;
+    }
+
+    .registro {
+        grid-template-columns: 1fr;
+    }
+}
